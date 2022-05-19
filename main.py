@@ -182,6 +182,9 @@ class Ball:
                         else:
                             self.horizontal_move = 2
                             self.vertical_move = 4
+                    else:
+                        self.horizontal_move = 2
+                        self.vertical_move = 4
 
                 elif self.ball_rect.top > self.area.top:
                     self.horizontal_move = -2
@@ -292,9 +295,9 @@ def main():
     ambient_sound = load_sound("Sounds/ambient.wav")
     impact_sound = load_sound("Sounds/impact.wav")
     ambient_sound.play(-1)
-    hit_sound.set_volume(0.9)
-    impact_sound.set_volume(0.7)
-    ambient_sound.set_volume(0.1)
+    hit_sound.set_volume(0.85)
+    impact_sound.set_volume(0.25)
+    ambient_sound.set_volume(0.11)
 
     all_blocks, sprites = createallblocks()
     base_platformsprite = pygame.sprite.RenderPlain(base_platform)
